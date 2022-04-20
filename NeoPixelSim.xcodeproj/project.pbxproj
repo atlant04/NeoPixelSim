@@ -8,22 +8,58 @@
 
 /* Begin PBXBuildFile section */
 		CE516D0A280D0FC2002CF40C /* NeoPixelSimApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE516D09280D0FC2002CF40C /* NeoPixelSimApp.swift */; };
-		CE516D0C280D0FC2002CF40C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE516D0B280D0FC2002CF40C /* ContentView.swift */; };
 		CE516D0E280D0FC3002CF40C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE516D0D280D0FC3002CF40C /* Assets.xcassets */; };
 		CE516D11280D0FC3002CF40C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE516D10280D0FC3002CF40C /* Preview Assets.xcassets */; };
+		CE516D19280D16B1002CF40C /* MIFParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE516D18280D16B1002CF40C /* MIFParser.swift */; };
+		CE516D1B280D16FB002CF40C /* PixelTest.mif in Resources */ = {isa = PBXBuildFile; fileRef = CE516D1A280D16FB002CF40C /* PixelTest.mif */; };
+		CE516D1D280D1FEA002CF40C /* SCOMP.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE516D1C280D1FEA002CF40C /* SCOMP.swift */; };
+		CE516D23280DA9BA002CF40C /* main.mif in Resources */ = {isa = PBXBuildFile; fileRef = CE516D22280DA9BA002CF40C /* main.mif */; };
+		CE516D3428108AA0002CF40C /* NeoPixelSimUnivApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE516D2528108A9F002CF40C /* NeoPixelSimUnivApp.swift */; };
+		CE516D3528108AA0002CF40C /* NeoPixelSimUnivApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE516D2528108A9F002CF40C /* NeoPixelSimUnivApp.swift */; };
+		CE516D3828108AA0002CF40C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE516D2728108AA0002CF40C /* Assets.xcassets */; };
+		CE516D3928108AA0002CF40C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE516D2728108AA0002CF40C /* Assets.xcassets */; };
+		CE516D4028108AB8002CF40C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE516D0B280D0FC2002CF40C /* ContentView.swift */; };
+		CE516D4128108AB8002CF40C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE516D0B280D0FC2002CF40C /* ContentView.swift */; };
+		CE516D4328108ACE002CF40C /* SCOMP.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE516D1C280D1FEA002CF40C /* SCOMP.swift */; };
+		CE516D4428108AD1002CF40C /* MIFParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE516D18280D16B1002CF40C /* MIFParser.swift */; };
+		CE516D4528108ADB002CF40C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE516D0B280D0FC2002CF40C /* ContentView.swift */; };
+		CE516D4628108AE0002CF40C /* PixelTest.mif in Resources */ = {isa = PBXBuildFile; fileRef = CE516D1A280D16FB002CF40C /* PixelTest.mif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CE516D06280D0FC2002CF40C /* NeoPixelSim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeoPixelSim.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE516D09280D0FC2002CF40C /* NeoPixelSimApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeoPixelSimApp.swift; sourceTree = "<group>"; };
-		CE516D0B280D0FC2002CF40C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CE516D0B280D0FC2002CF40C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = ../NeoPixelSim/ContentView.swift; sourceTree = "<group>"; };
 		CE516D0D280D0FC3002CF40C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE516D10280D0FC3002CF40C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CE516D12280D0FC3002CF40C /* NeoPixelSim.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NeoPixelSim.entitlements; sourceTree = "<group>"; };
+		CE516D18280D16B1002CF40C /* MIFParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIFParser.swift; sourceTree = "<group>"; };
+		CE516D1A280D16FB002CF40C /* PixelTest.mif */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PixelTest.mif; sourceTree = "<group>"; };
+		CE516D1C280D1FEA002CF40C /* SCOMP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCOMP.swift; sourceTree = "<group>"; };
+		CE516D22280DA9BA002CF40C /* main.mif */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = main.mif; path = "../../ece2031-project/main.mif"; sourceTree = "<group>"; };
+		CE516D2528108A9F002CF40C /* NeoPixelSimUnivApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeoPixelSimUnivApp.swift; sourceTree = "<group>"; };
+		CE516D2728108AA0002CF40C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE516D2C28108AA0002CF40C /* NeoPixelSimUniv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeoPixelSimUniv.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE516D3128108AA0002CF40C /* NeoPixelSimUniv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeoPixelSimUniv.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE516D3328108AA0002CF40C /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		CE516D03280D0FC2002CF40C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE516D2928108AA0002CF40C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE516D2E28108AA0002CF40C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,6 +73,8 @@
 			isa = PBXGroup;
 			children = (
 				CE516D08280D0FC2002CF40C /* NeoPixelSim */,
+				CE516D2428108A9F002CF40C /* Shared */,
+				CE516D3228108AA0002CF40C /* macOS */,
 				CE516D07280D0FC2002CF40C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,6 +83,8 @@
 			isa = PBXGroup;
 			children = (
 				CE516D06280D0FC2002CF40C /* NeoPixelSim.app */,
+				CE516D2C28108AA0002CF40C /* NeoPixelSimUniv.app */,
+				CE516D3128108AA0002CF40C /* NeoPixelSimUniv.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -53,7 +93,10 @@
 			isa = PBXGroup;
 			children = (
 				CE516D09280D0FC2002CF40C /* NeoPixelSimApp.swift */,
-				CE516D0B280D0FC2002CF40C /* ContentView.swift */,
+				CE516D18280D16B1002CF40C /* MIFParser.swift */,
+				CE516D1C280D1FEA002CF40C /* SCOMP.swift */,
+				CE516D1A280D16FB002CF40C /* PixelTest.mif */,
+				CE516D22280DA9BA002CF40C /* main.mif */,
 				CE516D0D280D0FC3002CF40C /* Assets.xcassets */,
 				CE516D12280D0FC3002CF40C /* NeoPixelSim.entitlements */,
 				CE516D0F280D0FC3002CF40C /* Preview Content */,
@@ -67,6 +110,24 @@
 				CE516D10280D0FC3002CF40C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CE516D2428108A9F002CF40C /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				CE516D2528108A9F002CF40C /* NeoPixelSimUnivApp.swift */,
+				CE516D0B280D0FC2002CF40C /* ContentView.swift */,
+				CE516D2728108AA0002CF40C /* Assets.xcassets */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		CE516D3228108AA0002CF40C /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				CE516D3328108AA0002CF40C /* macOS.entitlements */,
+			);
+			path = macOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,6 +150,40 @@
 			productReference = CE516D06280D0FC2002CF40C /* NeoPixelSim.app */;
 			productType = "com.apple.product-type.application";
 		};
+		CE516D2B28108AA0002CF40C /* NeoPixelSimUniv (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE516D3E28108AA0002CF40C /* Build configuration list for PBXNativeTarget "NeoPixelSimUniv (iOS)" */;
+			buildPhases = (
+				CE516D2828108AA0002CF40C /* Sources */,
+				CE516D2928108AA0002CF40C /* Frameworks */,
+				CE516D2A28108AA0002CF40C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NeoPixelSimUniv (iOS)";
+			productName = "NeoPixelSimUniv (iOS)";
+			productReference = CE516D2C28108AA0002CF40C /* NeoPixelSimUniv.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CE516D3028108AA0002CF40C /* NeoPixelSimUniv (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE516D3F28108AA0002CF40C /* Build configuration list for PBXNativeTarget "NeoPixelSimUniv (macOS)" */;
+			buildPhases = (
+				CE516D2D28108AA0002CF40C /* Sources */,
+				CE516D2E28108AA0002CF40C /* Frameworks */,
+				CE516D2F28108AA0002CF40C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NeoPixelSimUniv (macOS)";
+			productName = "NeoPixelSimUniv (macOS)";
+			productReference = CE516D3128108AA0002CF40C /* NeoPixelSimUniv.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -100,6 +195,12 @@
 				LastUpgradeCheck = 1310;
 				TargetAttributes = {
 					CE516D05280D0FC2002CF40C = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					CE516D2B28108AA0002CF40C = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					CE516D3028108AA0002CF40C = {
 						CreatedOnToolsVersion = 13.1;
 					};
 				};
@@ -118,6 +219,8 @@
 			projectRoot = "";
 			targets = (
 				CE516D05280D0FC2002CF40C /* NeoPixelSim */,
+				CE516D2B28108AA0002CF40C /* NeoPixelSimUniv (iOS) */,
+				CE516D3028108AA0002CF40C /* NeoPixelSimUniv (macOS) */,
 			);
 		};
 /* End PBXProject section */
@@ -128,7 +231,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE516D11280D0FC3002CF40C /* Preview Assets.xcassets in Resources */,
+				CE516D1B280D16FB002CF40C /* PixelTest.mif in Resources */,
 				CE516D0E280D0FC3002CF40C /* Assets.xcassets in Resources */,
+				CE516D23280DA9BA002CF40C /* main.mif in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE516D2A28108AA0002CF40C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE516D3828108AA0002CF40C /* Assets.xcassets in Resources */,
+				CE516D4628108AE0002CF40C /* PixelTest.mif in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE516D2F28108AA0002CF40C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE516D3928108AA0002CF40C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,8 +261,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE516D0C280D0FC2002CF40C /* ContentView.swift in Sources */,
+				CE516D19280D16B1002CF40C /* MIFParser.swift in Sources */,
+				CE516D1D280D1FEA002CF40C /* SCOMP.swift in Sources */,
+				CE516D4528108ADB002CF40C /* ContentView.swift in Sources */,
 				CE516D0A280D0FC2002CF40C /* NeoPixelSimApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE516D2828108AA0002CF40C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE516D3428108AA0002CF40C /* NeoPixelSimUnivApp.swift in Sources */,
+				CE516D4128108AB8002CF40C /* ContentView.swift in Sources */,
+				CE516D4328108ACE002CF40C /* SCOMP.swift in Sources */,
+				CE516D4428108AD1002CF40C /* MIFParser.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE516D2D28108AA0002CF40C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE516D3528108AA0002CF40C /* NeoPixelSimUnivApp.swift in Sources */,
+				CE516D4028108AB8002CF40C /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +460,123 @@
 			};
 			name = Release;
 		};
+		CE516D3A28108AA0002CF40C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZF27C7P399;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MT.NeoPixelSimUniv;
+				PRODUCT_NAME = NeoPixelSimUniv;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE516D3B28108AA0002CF40C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZF27C7P399;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MT.NeoPixelSimUniv;
+				PRODUCT_NAME = NeoPixelSimUniv;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE516D3C28108AA0002CF40C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZF27C7P399;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MT.NeoPixelSimUniv;
+				PRODUCT_NAME = NeoPixelSimUniv;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		CE516D3D28108AA0002CF40C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZF27C7P399;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MT.NeoPixelSimUniv;
+				PRODUCT_NAME = NeoPixelSimUniv;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -333,6 +594,24 @@
 			buildConfigurations = (
 				CE516D16280D0FC3002CF40C /* Debug */,
 				CE516D17280D0FC3002CF40C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE516D3E28108AA0002CF40C /* Build configuration list for PBXNativeTarget "NeoPixelSimUniv (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE516D3A28108AA0002CF40C /* Debug */,
+				CE516D3B28108AA0002CF40C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE516D3F28108AA0002CF40C /* Build configuration list for PBXNativeTarget "NeoPixelSimUniv (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE516D3C28108AA0002CF40C /* Debug */,
+				CE516D3D28108AA0002CF40C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

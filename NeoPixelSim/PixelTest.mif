@@ -1,0 +1,306 @@
+-- Altera Memory Initialization File (MIF)
+
+DEPTH = 2048;
+WIDTH = 16;
+
+ADDRESS_RADIX = HEX;
+DATA_RADIX = HEX;
+
+CONTENT
+  BEGIN
+    [000..7FF] : 0000;  -- Default to NOP
+
+           000 : B81F;  -- 	LOADI 31	;; Red = 31
+           001 : 8107;  -- 	CALL PUSH_AC
+           002 : B800;  -- 	LOADI 0		;; Green = 0
+           003 : 8107;  -- 	CALL PUSH_AC
+           004 : B800;  -- 	LOADI 0		;; Blue = 0
+           005 : 8107;  -- 	CALL PUSH_AC
+           006 : 082C;  -- 	LOAD COUNT_X
+           007 : 58F6;  -- 	XOR ALL_ONES
+           008 : 6801;  -- 	ADDI 1
+           009 : 18CC;  -- 	ADD WIDTH
+           00A : 6801;  -- 	ADDI 1
+           00B : 3814;  -- 	JPOS Spiral_16_Loop_CONT
+           00C : 3014;  -- 	JNEG Spiral_16_Loop_CONT
+           00D : 082A;  -- 	LOAD DIR_X
+           00E : 58F6;  -- 	XOR ALL_ONES
+           00F : 6801;  -- 	ADDI 1
+           010 : 102B;  -- 	STORE DIR_Y
+           011 : 082D;  -- 	LOAD COUNT_Y
+           012 : 182B;  -- 	ADD DIR_Y
+           013 : 102D;  -- 	STORE COUNT_Y
+           014 : 082D;  -- 	LOAD COUNT_Y
+           015 : 58F6;  -- 	XOR ALL_ONES
+           016 : 6801;  -- 	ADDI 1
+           017 : 18CD;  -- 	ADD HEIGHT
+           018 : 4024;  -- 	JZERO Spiral_16_DONE
+           019 : 082C;  -- 	LOAD COUNT_X		;; X
+           01A : 8107;  -- 	CALL PUSH_AC
+           01B : 082D;  -- 	LOAD COUNT_Y		;; Y
+           01C : 8107;  -- 	CALL PUSH_AC
+           01D : 80CE;  -- 	CALL SetRGB_16_XY
+           01E : 082C;  -- 	LOAD COUNT_X
+           01F : 182A;  -- 	ADD DIR_X
+           020 : 102C;  -- 	STORE COUNT_X
+           021 : B805;  -- 	LOADI 5
+           022 : 811A;  -- 	CALL DelayAC
+           023 : 2806;  -- 	JUMP Spiral_16_Loop
+           024 : 0AFF;  -- 	LOAD SP
+           025 : 6803;  -- 	ADDI 3
+           026 : 12FF;  -- 	STORE SP
+           027 : B801;  -- 	LOADI 1
+           028 : 811A;  -- 	CALL DelayAC
+           029 : 2800;  -- 	JUMP Spiral_16
+           02A : 0001;  -- DIR_X: dw 1
+           02B : 0001;  -- DIR_Y: dw 1
+           02C : 0000;  -- COUNT_X: dw 0
+           02D : 0000;  -- COUNT_Y: dw 0
+           02E : B800;  -- 	LOADI 0
+           02F : 98B0;  -- 	OUT PXL_A
+           030 : B81F;  -- 	LOADI 31	;; Red = 31
+           031 : 8107;  -- 	CALL PUSH_AC
+           032 : B800;  -- 	LOADI 0		;; Green = 0
+           033 : 8107;  -- 	CALL PUSH_AC
+           034 : B800;  -- 	LOADI 0		;; Blue = 0
+           035 : 8107;  -- 	CALL PUSH_AC
+           036 : 80B1;  -- 	CALL SetRGB_16
+           037 : 0AFF;  -- 	LOAD SP
+           038 : 6803;  -- 	ADDI 3
+           039 : 12FF;  -- 	STORE SP
+           03A : B80A;  -- 	LOADI 10
+           03B : 811A;  -- 	CALL DelayAC
+           03C : B801;  -- 	LOADI 1
+           03D : 98B0;  -- 	OUT PXL_A
+           03E : B800;  -- 	LOADI 0			;; Red = 0
+           03F : 8107;  -- 	CALL PUSH_AC
+           040 : B81F;  -- 	LOADI 31		;; Green = 31
+           041 : 8107;  -- 	CALL PUSH_AC
+           042 : B800;  -- 	LOADI 0		;; Blue = 0
+           043 : 8107;  -- 	CALL PUSH_AC
+           044 : 80B1;  -- 	CALL SetRGB_16
+           045 : 0AFF;  -- 	LOAD SP
+           046 : 6803;  -- 	ADDI 3
+           047 : 12FF;  -- 	STORE SP
+           048 : B80A;  -- 	LOADI 10
+           049 : 811A;  -- 	CALL DelayAC
+           04A : B802;  -- 	LOADI 2
+           04B : 98B0;  -- 	OUT PXL_A
+           04C : B800;  -- 	LOADI 0			;; Red = 0
+           04D : 8107;  -- 	CALL PUSH_AC
+           04E : B800;  -- 	LOADI 0		;; Green = 0
+           04F : 8107;  -- 	CALL PUSH_AC
+           050 : B81F;  -- 	LOADI 31		;; Blue = 31
+           051 : 8107;  -- 	CALL PUSH_AC
+           052 : 80B1;  -- 	CALL SetRGB_16
+           053 : 0AFF;  -- 	LOAD SP
+           054 : 6803;  -- 	ADDI 3
+           055 : 12FF;  -- 	STORE SP
+           056 : B80A;  -- 	LOADI 10
+           057 : 811A;  -- 	CALL DelayAC
+           058 : B800;  -- 	LOADI 0 
+           059 : 8103;  -- 	CALL CLEAR_AC
+           05A : B801;  -- 	LOADI 1
+           05B : 8103;  -- 	CALL CLEAR_AC
+           05C : B802;  -- 	LOADI 2
+           05D : 8103;  -- 	CALL CLEAR_AC
+           05E : B80A;  -- 	LOADI 10
+           05F : 811A;  -- 	CALL DelayAC
+           060 : 282E;  -- 	JUMP Test_Stack_and_Set_RGB_16
+           061 : B800;  -- 	LOADI 0
+           062 : 98B0;  -- 	OUT PXL_A	;; set addr = 0
+           063 : B81F;  -- 	LOADI 31 	;; BLUE	
+           064 : 98B1;  --     OUT PXL_D	;; pixels[addir] = blue
+           065 : B80A;  -- 	LOADI 10	;; wait 1 sec
+           066 : 811A;  -- 	CALL DelayAC
+           067 : 0AFF;  -- 	LOAD SP		;;dec stack
+           068 : 6FFF;  -- 	ADDI -1
+           069 : 12FF;  -- 	STORE SP
+           06A : 90B1;  -- 	IN PXL_D	;; AC = pixels[0]
+           06B : 6820;  -- 	ADDI 32		;; 63 = 31 + 32
+           06C : 6005;  -- 	SHIFT 5		;; shift to green
+           06D : 12FF;  -- 	STORE SP	;; push green on stack
+           06E : B800;  -- 	LOADI 0		;; pixels[0] = black
+           06F : 98B1;  -- 	OUT PXL_D
+           070 : B801;  -- 	LOADI 1		;; addr = 1
+           071 : 98B0;  -- 	OUT PXL_A
+           072 : 0AFF;  -- 	LOAD SP		;; AC = pop
+           073 : 98B1;  -- 	OUT PXL_D	;; pixels[1] = green
+           074 : B80A;  -- 	LOADI 10	;; wait 1 sec
+           075 : 811A;  -- 	CALL DelayAC
+           076 : 0AFF;  -- 	LOAD SP		;; dec stack
+           077 : 6FFF;  -- 	ADDI -1
+           078 : 12FF;  -- 	STORE SP
+           079 : 90B1;  -- 	IN PXL_D	;; AC = pixels[1]
+           07A : 6FE0;  -- 	ADDI -32	;; 31 = 63 - 32
+           07B : 6006;  -- 	SHIFT 6		;; shift to red
+           07C : 12FF;  -- 	STORE SP	;; push red on stack
+           07D : B800;  -- 	LOADI 0		;; set pixels[1] = black
+           07E : 98B1;  -- 	OUT PXL_D
+           07F : B802;  -- 	LOADI 2		;; addr = 1
+           080 : 98B0;  -- 	OUT PXL_A
+           081 : 0AFF;  -- 	LOAD SP		;; AC = pop
+           082 : 98B1;  -- 	OUT PXL_D	;; pixels[2] = red
+           083 : B80A;  -- 	LOADI 10	;; wait 1 sec
+           084 : 811A;  -- 	CALL DelayAC
+           085 : 0AFF;  -- 	LOAD SP		;; free stack
+           086 : 6802;  -- 	ADDI 2
+           087 : 12FF;  -- 	STORE SP
+           088 : 2861;  -- 	JUMP Test_IMW
+           089 : B803;  -- 	LOADI 3	;; auto_inc
+           08A : 98B2;  -- 	OUT PXL_MODE
+           08B : B800;  -- 	LOADI 0
+           08C : 98B0;  -- 	OUT PXL_A
+           08D : B81F;  -- 	LOADI 31 ;; BLUE 
+           08E : 98B1;  --     OUT PXL_D
+           08F : B83F;  -- 	LOADI 63 ;; GREEN	
+           090 : 6005;  -- 	SHIFT 5
+           091 : 98B1;  --     OUT PXL_D
+           092 : B81F;  -- 	LOADI 31 ;; RED
+           093 : 600B;  -- 	SHIFT 11
+           094 : 98B1;  --     OUT PXL_D
+           095 : 2889;  -- 	JUMP Loop_Auto_Inc
+           096 : B802;  -- 	LOADI 2
+           097 : 98B2;  -- 	OUT PXL_MODE
+           098 : B81F;  -- 	LOADI 31
+           099 : 98B1;  -- 	OUT PXL_D
+           09A : 2896;  -- 	JUMP Loop_All_Pixels
+           09B : B800;  -- 	LOADI  0
+           09C : 98B0;  --     OUT    PXL_A
+           09D : B800;  -- 	LOADI 0
+           09E : 5122;  -- 	OR RED
+           09F : 98B1;  -- 	OUT PXL_D
+           0A0 : B800;  -- 	LOADI 0
+           0A1 : 98B1;  --     OUT PXL_D
+           0A2 : B801;  -- 	LOADI  1
+           0A3 : 98B0;  --     OUT    PXL_A
+           0A4 : B800;  -- 	LOADI 0
+           0A5 : 5124;  -- 	OR GREEN
+           0A6 : 98B1;  -- 	OUT PXL_D
+           0A7 : B800;  -- 	LOADI 0
+           0A8 : 98B1;  --     OUT PXL_D
+           0A9 : B802;  -- 	LOADI  2
+           0AA : 98B0;  --     OUT    PXL_A
+           0AB : B800;  -- 	LOADI 0
+           0AC : 98B1;  -- 	OUT PXL_D
+           0AD : B800;  -- 	LOADI 0
+           0AE : 5123;  -- 	OR BLUE
+           0AF : 98B1;  --     OUT PXL_D
+           0B0 : 289B;  --     JUMP   Loop
+           0B1 : B800;  -- 	LOADI 0			;; reset curr color
+           0B2 : 10CA;  -- 	STORE CurColor
+           0B3 : 0AFF;  -- 	LOAD SP			;; ColorPtr = SP + 2
+           0B4 : 6802;  -- 	ADDI 2
+           0B5 : 10CB;  -- 	STORE ColorPtr
+           0B6 : 70CB;  -- 	ILOAD ColorPtr	;; AC = *(SP + 2) = RED
+           0B7 : 600B;  -- 	SHIFT 11		;; CurColor = 0xF00 for red
+           0B8 : 10CA;  -- 	STORE CurColor
+           0B9 : 0AFF;  -- 	LOAD SP			;; ColorPtr = SP + 1
+           0BA : 6801;  -- 	ADDI 1
+           0BB : 10CB;  -- 	STORE ColorPtr
+           0BC : 70CB;  -- 	ILOAD ColorPtr		;; AC = *(SP + 1) = GREEN
+           0BD : 48C9;  -- 	AND SIX_BIT_MASK	;; Take only 6 LSB for green
+           0BE : 6005;  -- 	SHIFT 5				;; shift 6 LSB to green place	
+           0BF : 18CA;  -- 	ADD CurColor		;; add to curr color
+           0C0 : 10CA;  -- 	STORE CurColor	
+           0C1 : 72FF;  -- 	ILOAD SP			;; AC = *(SP) = BLUE
+           0C2 : 48C8;  -- 	AND FIVE_BIT_MASK	;; Take only 5 LSB for green
+           0C3 : 18CA;  -- 	ADD CurColor		;; add to curr color
+           0C4 : 10CA;  -- 	STORE CurColor
+           0C5 : 08CA;  -- 	LOAD CurColor		;; OUT current color to neo pixel
+           0C6 : 98B1;  -- 	OUT PXL_D		
+           0C7 : 8800;  -- 	RETURN 
+           0C8 : 001F;  -- FIVE_BIT_MASK: DW &B000000000011111
+           0C9 : 003F;  -- SIX_BIT_MASK:  DW &B000000000111111
+           0CA : 0000;  -- CurColor: DW 0
+           0CB : 0000;  -- ColorPtr: DW 0
+           0CC : 0020;  -- WIDTH: DW 32
+           0CD : 0006;  -- HEIGHT: DW 6
+           0CE : 80FA;  -- 	CALL READ_SP_0
+           0CF : 10F9;  -- 	STORE SetRGB_16_XY_COUNTER
+           0D0 : 48F5;  -- 	AND ONE_MASK
+           0D1 : 40D8;  -- 	JZERO SetRGB_16_XY_EVEN
+           0D2 : 08F9;  -- 	LOAD SetRGB_16_XY_COUNTER
+           0D3 : 6801;  -- 	ADDI 1 
+           0D4 : 10F9;  -- 	STORE SetRGB_16_XY_COUNTER
+           0D5 : B800;  -- 	LOADI 0
+           0D6 : 6FFF;  -- 	ADDI -1
+           0D7 : 10F8;  -- 	STORE SetRGB_16_XY_ADDR
+           0D8 : 0000;  -- 	NOP
+           0D9 : 08F9;  -- 	LOAD SetRGB_16_XY_COUNTER
+           0DA : 40E2;  -- 	JZERO SetRGB_16_XY_DONE
+           0DB : 08F8;  -- 	LOAD SetRGB_16_XY_ADDR
+           0DC : 18CC;  -- 	ADD WIDTH
+           0DD : 10F8;  -- 	STORE SetRGB_16_XY_ADDR
+           0DE : 08F9;  -- 	LOAD SetRGB_16_XY_COUNTER
+           0DF : 6FFF;  -- 	ADDI -1
+           0E0 : 10F9;  -- 	STORE SetRGB_16_XY_COUNTER
+           0E1 : 28D9;  -- 	JUMP SetRGB_16_XY_LOOP
+           0E2 : 80FC;  -- 	CALL READ_SP_1
+           0E3 : 10F7;  -- 	STORE SetRGB_16_XY_X
+           0E4 : 08F7;  -- 	LOAD SetRGB_16_XY_X
+           0E5 : 48F5;  -- 	AND ONE_MASK
+           0E6 : 40EB;  -- 	JZERO SetRGB_16_XY_EVEN_X
+           0E7 : 08F7;  -- 	LOAD SetRGB_16_XY_X
+           0E8 : 58F6;  -- 	XOR ALL_ONES
+           0E9 : 6801;  -- 	ADDI 1
+           0EA : 10F7;  -- 	STORE SetRGB_16_XY_X
+           0EB : 08F8;  -- 	LOAD SetRGB_16_XY_ADDR
+           0EC : 18F7;  -- 	ADD SetRGB_16_XY_X
+           0ED : 98B0;  -- 	OUT PXL_A
+           0EE : 0AFF;  -- 	LOAD SP
+           0EF : 6802;  -- 	ADDI 2
+           0F0 : 12FF;  -- 	STORE SP
+           0F1 : B800;  -- 	LOADI 0
+           0F2 : 10F8;  -- 	STORE SetRGB_16_XY_ADDR
+           0F3 : 80B1;  -- 	CALL SetRGB_16
+           0F4 : 8800;  -- 	RETURN
+           0F5 : 0001;  -- ONE_MASK: dw &H0001
+           0F6 : FFFF;  -- ALL_ONES: dw &HFFFF
+           0F7 : 0000;  -- SetRGB_16_XY_X: DW 0
+           0F8 : 0000;  -- SetRGB_16_XY_ADDR: DW 0
+           0F9 : 0000;  -- SetRGB_16_XY_COUNTER: DW 0
+           0FA : 72FF;  -- 	ILOAD SP
+           0FB : 8800;  -- 	RETURN
+           0FC : 1121;  -- 	STORE AC
+           0FD : 0AFF;  -- 	LOAD SP
+           0FE : 6801;  -- 	ADDI 1
+           0FF : 1102;  -- 	STORE READ_SP_TEMP
+           100 : 7102;  -- 	ILOAD READ_SP_TEMP
+           101 : 8800;  -- 	RETURN
+           102 : 0000;  -- READ_SP_TEMP: DW 0
+           103 : 98B0;  -- 	OUT PXL_A
+           104 : B800;  -- 	LOADI 0
+           105 : 98B1;  -- 	OUT PXL_D
+           106 : 8800;  -- 	RETURN
+           107 : 1121;  -- 	STORE AC	;; MEM_AC = AC 
+           108 : 0AFF;  -- 	LOAD SP		;; AC = SP
+           109 : 6FFF;  -- 	ADDI -1		;; dec SP
+           10A : 12FF;  -- 	STORE SP
+           10B : 0921;  -- 	LOAD AC		;; AC = MEM_AC
+           10C : 7AFF;  -- 	ISTORE SP	;; MEM[MEM[SP]] = AC
+           10D : 8800;  -- 	RETURN
+           10E : 7AFF;  -- 	ISTORE SP
+           10F : 8800;  -- 	RETURN
+           110 : 1121;  -- 	STORE AC	;; store AC
+           111 : 0AFF;  -- 	LOAD SP		;; AC = SP
+           112 : 6801;  -- 	ADDI 1		;; AC = SP + 1
+           113 : 12FF;  -- 	STORE SP 	;; SP = SP + 1
+           114 : 0921;  -- 	LOAD AC		;; AC = MEM_AC
+           115 : 7AFF;  -- 	ISTORE SP	;; *(SP + 1) = AC
+           116 : 0AFF;  -- 	LOAD SP		;; AC = SP
+           117 : 6FFF;  -- 	ADDI -1		;; SP = SP - 1
+           118 : 12FF;  -- 	STORE SP	
+           119 : 8800;  -- 	RETURN
+           11A : 1120;  -- 	STORE  DelayTime   ; Save the desired delay
+           11B : 9802;  -- 	OUT    Timer       ; Reset the timer
+           11C : 9002;  -- 	IN     Timer       ; Get the current timer value
+           11D : 2120;  -- 	SUB    DelayTime
+           11E : 311C;  -- 	JNEG   WaitingLoop ; Repeat until timer = delay value
+           11F : 8800;  -- 	RETURN
+           120 : 0000;  -- DelayTime: DW 0
+           121 : 0000;  -- AC: DW 0
+           122 : FF00;  -- RED:       DW &HFF00
+           123 : FF00;  -- BLUE:       DW &HFF00
+           124 : 00FF;  -- GREEN:       DW &H00FF
+  END;
